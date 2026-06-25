@@ -15,6 +15,7 @@ resource "docker_container" "infra" {
 }
 resource "docker_container" "node1" {
   name  = "node1"
+  hostname = "node1"
   image = docker_image.ubuntu.image_id
   command = ["sleep", "infinity"]
 
@@ -24,6 +25,7 @@ resource "docker_container" "node1" {
 }
 resource "docker_container" "node2" {
   name  = "node2"
+  hostname = "node2"
   image = docker_image.ubuntu.image_id
   command = ["sleep", "infinity"]
 
@@ -33,6 +35,7 @@ resource "docker_container" "node2" {
 }
 resource "docker_container" "node3" {
   name  = "node3"
+  hostname = "node3"
   image = docker_image.ubuntu.image_id
   command = ["sleep", "infinity"]
 
