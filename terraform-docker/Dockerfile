@@ -10,13 +10,13 @@ RUN apt update && apt install -y \
 
 RUN mkdir /var/run/sshd
 
-# 🔑 habilitar root login por SSH
+#  habilitar root login por SSH
 RUN echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
 
-# 🔑 (opcional pero útil) habilitar password login
+#   habilitar password login - Opcional
 RUN echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
 
-# 🔑 setear password root (esto es lo que te faltaba)
+# setear password root (esto es lo que te faltaba)
 RUN echo "root:root" | chpasswd
 
 EXPOSE 22
