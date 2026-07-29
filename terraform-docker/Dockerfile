@@ -6,6 +6,7 @@ RUN apt update && apt install -y \
     openssh-server \
     python3 \
     sudo \
+    net-tools\
     iputils-ping
 
 RUN mkdir /var/run/sshd
@@ -13,7 +14,11 @@ RUN mkdir /var/run/sshd
 #  habilitar root login por SSH
 RUN echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
 
+
 #   habilitar password login - Opcional
+
+#  (opcional pero útil) habilitar password login
+
 RUN echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
 
 # setear password root (esto es lo que te faltaba)
