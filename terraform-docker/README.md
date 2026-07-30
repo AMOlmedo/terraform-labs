@@ -1,3 +1,52 @@
+Secuencia de ejecuacion:
+
+terraform apply
+       │
+       ▼
+Crea la red Docker
+       │
+       ▼
+Construye la imagen
+       │
+       ▼
+Crea infra
+       │
+       ▼
+Crea node1
+       │
+       ▼
+Crea node2
+       │
+       ▼
+Crea node3
+
+Tener en cuenta que:
+
+ssh-keygen
+
+↓
+
+copiar id_ed25519.pub
+
+↓
+
+crear ~/.ssh
+
+↓
+
+authorized_keys
+
+↓
+
+chmod
+
+↓
+
+ansible ping
+ansible hostname, uptime, ip a
+
+
+
 form 
 Cuando trabajamos con Terraform de manera profesional en la industria, no escribimos todo en un único archivo gigante. En su lugar, dividimos el código en archivos especializados para maximizar la legibilidad, mantenibilidad y modularidad:
 
