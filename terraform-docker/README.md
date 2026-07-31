@@ -1,3 +1,32 @@
+Estructura del proyecto:
+
+root@Infra:~/terraform-labs/terraform-docker# tree
+.
+|-- Dockerfile-bckp
+|-- README.md
+|-- Trabajo_Practico.md
+|-- ansible
+|   |-- ansible.cfg
+|   |-- inventory.ini
+|   `-- playbooks
+|       `-- site.yml
+|-- docker
+|   |-- infra
+|   |   `-- Dockerfile
+|   `-- node
+|-- scritps
+`-- terraform
+    |-- main.tf
+    |-- outputs.tf
+    |-- providers.tf
+    |-- terraform.tfstate
+    |-- terraform.tfstate.backup
+    `-- variables.tf
+
+8 directories, 13 files
+root@Infra:~/terraform-labs/terraform-docker#
+
+
 Secuencia de ejecuacion:
 
 terraform apply
