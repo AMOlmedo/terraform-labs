@@ -1,0 +1,27 @@
+
+
+- name: Configuración inicial
+
+  hosts: nodes
+
+  become: true
+
+  tasks:
+
+    - name: Instalar Apache
+
+      apt:
+
+        name: apache2
+
+        state: present
+
+    - name: Asegurar que Apache esté iniciado
+
+      service:
+
+        name: apache2
+
+        state: started
+
+        enabled: true
