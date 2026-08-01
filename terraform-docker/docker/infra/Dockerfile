@@ -25,4 +25,4 @@ ENV LC_ALL=en_US.UTF-8
 # Directorio de trabajo
 WORKDIR /ansible
 
-CMD ["bash"]
+CMD ["sleep", "infinity"]

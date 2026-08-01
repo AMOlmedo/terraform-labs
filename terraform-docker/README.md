@@ -1,4 +1,28 @@
-Estructura del proyecto:
+Arquitectura del proyecto:
+
+                    Terraform
+                        │
+                        │
+                docker provider
+                        │
+         ┌──────────────┴──────────────┐
+         │                             │
+    Docker Network               Docker Images
+         │                             │
+         │                      ┌──────┴──────┐
+         │                      │             │
+         │                 infra-image   node-image
+         │                      │             │
+         │                      │     ┌───────┼────────┐
+         │                      │     │       │        │
+      infra  <----------------> node1 node2 node3
+         │
+         │
+     Ansible
+         │
+     administra
+         │
+ node1 node2 node3
 
 root@Infra:~/terraform-labs/terraform-docker# tree
 .
